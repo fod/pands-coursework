@@ -15,12 +15,11 @@ validated = False
 # boolean variable is set to true and the loop ends. Otherwise an error message is displayed and
 # the loop reiterates to ask again for a value from the user
 while (validated == False):
-    
-    percentage = float(input("Please enter your percentage: "))
 
-    # percentage cast to int for range comparison as a floating point number with a fractional
-    # part would not fall in the integer range(0, 101)
-    if (int(percentage) not in range(0,101)):
+    # percentage is rounded to fix rounding error mentioned in question 3
+    percentage = round(float(input("Please enter your percentage: ")))
+
+    if (percentage not in range(0,101)):
         print("\nPercentage must be between 0 and 100\n")
     else:
         validated = True

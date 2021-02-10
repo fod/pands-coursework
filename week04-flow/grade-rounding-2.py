@@ -15,7 +15,7 @@ validated = False
 # boolean variable is set to true and the loop ends. Otherwise an error message is displayed and
 # the loop reiterates to ask again for a value from the user
 while (validated == False):
-    
+
     percentage = float(input("Please enter your percentage: "))
 
     # percentage cast to int for range comparison as a floating point number with a fractional
@@ -26,16 +26,16 @@ while (validated == False):
         validated = True
 
 # An if-elif-else statement assigns a grade based on percentage value
-if percentage >= 70:
+if percentage >= 69.5:
     grade = "Distinction"
-elif percentage >= 60:  # If the code reaches this point then percentage must be less than 70
+elif percentage >= 59.5:  # If the code reaches this point then percentage must be less than 69.5
     grade = "Merit 1"
-elif percentage >= 50:  # If the code reaches this point then percentage must be less than 60
+elif percentage >= 49.5:  # If the code reaches this point then percentage must be less than 59.5
     grade = "Merit 2"
-elif percentage >= 40:  # If the code reaches this point then percentage must be less than 50
+elif percentage >= 39.5:  # If the code reaches this point then percentage must be less than 49.5
     grade ="Pass"
 else:
-     grade = "Fail"     # If the code reaches this point then percentage must be less than 40
+     grade = "Fail"     # If the code reaches this point then percentage must be less than 39.5
 
 
 # Print the result
