@@ -14,9 +14,14 @@ def menu():
     # Get user input and place in 'selection' variable
     selection = input("Type one letter (a/v/q): ")
 
-    # Echo selection value to user
-    print("You chose", selection)
+    # Return users selection from function
+    return selection
+
+    
 
 
 # call function
-menu()
+selection = menu()
+
+# Echo selection value to user
+print("You chose", selection)
