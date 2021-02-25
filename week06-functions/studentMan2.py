@@ -1,5 +1,5 @@
 # studentMan2.py
-# A student management program
+# A student management program - adding some functions to the menu
 # Author: Fiachra O' Donoghue
 
 # Create the menu
