@@ -2,9 +2,17 @@
 # A program that records the number of times it has been run
 # Author: Fiachra O' Donoghue
 
+# os.path needed for testing if file exists
+import os.path
+
 # Count-reading function
 def readCount(filename):
 
+    # Test if file exists
+    if not (os.path.isfile(filename)):
+        print("Creating countfile...")
+        writeCount(filename, 0)
+        
     # Read current value from countFile
     with open(filename, "r") as file:
         count = int(file.read())
