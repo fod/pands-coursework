@@ -35,7 +35,7 @@ def doAdd(studentList):
     return studentList
 
 
-# The getMOdule function
+# The getModule function
 # ... asks the user to enter a module and a grade and returns a single key-value dict 
 # with the module as the key and the grade as the value
 def getModule():
