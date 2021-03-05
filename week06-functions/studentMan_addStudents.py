@@ -2,7 +2,7 @@
 # Developing the add student functionality for studentMan
 # Author: Fiachra O' Donoghue
 
-# Decalre list to hold the students
+# Declare list to hold the students
 # This list can be passed to doAdd and doView
 students = []
 
