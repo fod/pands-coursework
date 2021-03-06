@@ -65,7 +65,6 @@ def getModule():
 def doView(studentList):
     print(studentList)
 
-
 while (True):
     selection = menu()
 
