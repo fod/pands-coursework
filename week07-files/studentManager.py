@@ -2,6 +2,10 @@
 # The complete student manager
 # Author: Fiachra O' Donoghue
 
+# For saving objects
+import json
+
+# List of students
 studentList = []
 
 # Create the menu
@@ -11,6 +15,8 @@ def menu():
     print("\nWhat would you like to do?\n", \
     "\t(a) Add a new student\n", \
     "\t(v) View students\n", \
+    "\t(l) Load student list\n", \
+    "\t(s) Save student list\n", \
     "\t(q) Quit\n")
 
     # Get user input and place in 'selection' variable
@@ -66,6 +72,16 @@ def doView(studentList):
     print(studentList)
 
 
+def doSave(studentList):
+    with open("studentList.txt", "w") as file:
+        json.dump(studentList, file)
+ 
+
+def doLoad():
+    with open("studentList.txt", "w") as file:
+        studentList = json.load(file)
+
+
 while (True):
     selection = menu()
 
@@ -74,6 +90,12 @@ while (True):
         continue
     elif selection == "v":
         doView(studentList)
+        continue
+    elif selection == "l":
+        doLoad()
+        continue
+    elif selection == "s":
+        doSave(studentList)
         continue
     elif selection == "q":
         break
